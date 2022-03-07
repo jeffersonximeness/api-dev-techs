@@ -1,6 +1,11 @@
 const express = require('express')
+const routes = require('./routes')
 
 const app = express()
+
+// request com formato json
+app.use(express.json())
+app.use(routes)
 
 const PORT = process.env.PORT || 8080
 
